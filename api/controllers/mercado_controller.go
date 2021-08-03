@@ -12,7 +12,7 @@ import (
 func Mercados(c *gin.Context) {
 	fmt.Println("entrou no mostrar com id")
 	c.JSON(200, gin.H{
-		"value": "meu pau",
+		"value": "Erro ",
 	})
 }
 
@@ -35,7 +35,7 @@ func ShowMercado(c *gin.Context) {
 	err = db.First(&mercado, newid).Error
 	if err != nil {
 		c.JSON(400, gin.H{
-			"error": "linguiça não encontrada " + err.Error(),
+			"error": " não encontrada " + err.Error(),
 		})
 		return
 	}
@@ -52,7 +52,7 @@ func CreateProduto(c *gin.Context) {
 
 	if err != nil {
 		c.JSON(400, gin.H{
-			"error": "linguiça não criada " + err.Error(),
+			"error": " não criada " + err.Error(),
 		})
 		return
 	}
@@ -61,7 +61,7 @@ func CreateProduto(c *gin.Context) {
 
 	if err != nil {
 		c.JSON(400, gin.H{
-			"error": "linguiça não encontrada " + err.Error(),
+			"error": " não encontrada " + err.Error(),
 		})
 		return
 	}
@@ -75,7 +75,7 @@ func ShowProduto(c *gin.Context) {
 
 	if err != nil {
 		c.JSON(400, gin.H{
-			"error": "cannot find product by id: " + err.Error(),
+			"error": "não pode achar produto por id: " + err.Error(),
 		})
 		return
 	}
@@ -92,7 +92,7 @@ func UpdateProduto(c *gin.Context) {
 
 	if err != nil {
 		c.JSON(400, gin.H{
-			"error": "linguiça não criada " + err.Error(),
+			"error": " não criada " + err.Error(),
 		})
 		return
 	}
@@ -101,7 +101,7 @@ func UpdateProduto(c *gin.Context) {
 
 	if err != nil {
 		c.JSON(400, gin.H{
-			"error": "linguiça não atualizada " + err.Error(),
+			"error": " não atualizada " + err.Error(),
 		})
 		return
 	}
@@ -124,7 +124,7 @@ func DeleteMercado(c *gin.Context) {
 
 	if err != nil {
 		c.JSON(400, gin.H{
-			"error": "salsicha nao deletada" + err.Error(),
+			"error": "produto não deletado" + err.Error(),
 		})
 		return
 	}
