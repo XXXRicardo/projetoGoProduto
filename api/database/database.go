@@ -11,7 +11,7 @@ var db *gorm.DB
 
 func StartDB() {
 
-	str := "user=postgres dbname=linguica password=rockeiro,1 host=localhost sslmode=disable"
+	str := "user=postgres dbname=mercado password=rockeiro,1 host=localhost sslmode=disable"
 
 	database, err := gorm.Open(postgres.Open(str), &gorm.Config{})
 	if err != nil {
